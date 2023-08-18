@@ -41,24 +41,6 @@ The `plotGridSearch` algorithm visualizes cross-validation results using Plotly.
 6. **Display Plot**:
    - Display the finalized figure using `fig.show()`.
 
-## Complexity Analysis
-
-**Time Complexity**:
-
-- DataFrame operations (sorting, indexing): O(n log n)
-- Loop over parameters: O(len(parameters))
-- Plotly figure creation and updates: O(len(parameters))
-- Linearity check: O(len(parameters))
-- `fig.show()`: Rendering time, not considered in complexity analysis.
-
-Overall Time Complexity: O(n log n) + O(len(parameters))
-
-**Space Complexity**:
-
-- `cv_results`, `rank_1`: O(n)
-- `fig` and other local variables: O(1)
-
-Overall Space Complexity: O(n)
 # Complexity Analysis of `tableGridSearch` Function
 
 The `tableGridSearch` function is analyzed for its time and space complexity. This function is designed to display cross-validation results in a tabular format while providing options to manipulate the display.
@@ -102,5 +84,4 @@ Overall Time Complexity: O(n log n) + O(n) + O(n) + O(n)
 - Style modifications: O(1)
 
 Overall Space Complexity: O(n)
-
 
