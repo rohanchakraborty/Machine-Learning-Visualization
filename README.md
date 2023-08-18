@@ -59,4 +59,48 @@ Overall Time Complexity: O(n log n) + O(len(parameters))
 - `fig` and other local variables: O(1)
 
 Overall Space Complexity: O(n)
+# Complexity Analysis of `tableGridSearch` Function
+
+The `tableGridSearch` function is analyzed for its time and space complexity. This function is designed to display cross-validation results in a tabular format while providing options to manipulate the display.
+
+## Steps Undertaken
+
+1. **Data Preparation and Sorting**:
+   - A DataFrame is created from cross-validation results (`clf.cv_results_`).
+   - The DataFrame is sorted based on rank and mean fit time.
+
+2. **Column Reordering**:
+   - Column order is rearranged to prioritize `rank_test_score`, `mean_test_score`, and `std_test_score` columns.
+
+3. **CSV Saving** (Optional):
+   - If `save` is True, the DataFrame is saved to a CSV file. This involves iterating over the DataFrame rows and writing to a CSV file.
+
+4. **Column Dropping** (Optional):
+   - Unless `all_columns` is True, specific columns are dropped from the DataFrame. Columns dropped include `params`, `std_*`, and `split*` columns.
+
+5. **Row Filtering** (Optional):
+   - Unless `all_ranks` is True, only rows with a rank equal to 1 are retained in the DataFrame. The `rank_test_score` column is dropped from the DataFrame.
+
+6. **Display the DataFrame**:
+   - The DataFrame is displayed using the `display` function.
+
+## Complexity Analysis
+
+**Time Complexity**:
+
+- DataFrame operations (sorting): O(n log n)
+- Column reordering: O(n), where n is the number of columns in the DataFrame.
+- CSV saving (if enabled): O(n)
+- DataFrame dropping and filtering (based on `all_columns` and `all_ranks`): O(n)
+
+Overall Time Complexity: O(n log n) + O(n) + O(n) + O(n)
+
+**Space Complexity**:
+
+- `cv_results`: O(n), where n is the number of cross-validation results.
+- `columns`: O(m), where m is the number of columns in the DataFrame.
+- Style modifications: O(1)
+
+Overall Space Complexity: O(n)
+
 
