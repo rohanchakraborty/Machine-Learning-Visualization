@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -e .[dev] pytest scikit-learn
+        pip install -e .[dev] pytest scikit-learn ipython
 
     - name: Run tests
       run: pytest
