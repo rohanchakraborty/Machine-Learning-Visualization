@@ -1,3 +1,5 @@
+[![Continuous Integration](https://github.com/rohanchakraborty/Machine-Learning-Visualization/actions/workflows/main.yml/badge.svg)](https://github.com/rohanchakraborty/Machine-Learning-Visualization/actions/workflows/main.yml)
+
 # cvplot
 
 cvplot is a Python library for visualizing cross-validation results.
