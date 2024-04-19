@@ -1,3 +1,11 @@
+import pandas as pd
+from plotly.subplots import make_subplots
+import plotly.graph_objs as go
+import pprint
+from scipy import stats
+from IPython.display import display
+
+
 def tableGridSearch(clf, all_columns=False, all_ranks=False, save=True):
     """
     Displays cross-validation results in a tabular format.
