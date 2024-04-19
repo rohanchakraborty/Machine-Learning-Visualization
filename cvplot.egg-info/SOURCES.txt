@@ -1,0 +1,6 @@
+setup.py
+cvplot.egg-info/PKG-INFO
+cvplot.egg-info/SOURCES.txt
+cvplot.egg-info/dependency_links.txt
+cvplot.egg-info/requires.txt
+cvplot.egg-info/top_level.txt
