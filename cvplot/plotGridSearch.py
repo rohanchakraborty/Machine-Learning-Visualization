@@ -3,6 +3,15 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 def plotGridSearch(clf):
+    """
+    Visualizes cross-validation results using Plotly.
+
+    Parameters:
+    - clf: A trained classifier with cross-validation results.
+
+    Returns:
+    None
+    """
     # Create a DataFrame from cross-validation results and sort by rank and fit time
     cv_results = pd.DataFrame(clf.cv_results_).sort_values(by=['rank_test_score', 'mean_fit_time'])
 

@@ -1,5 +1,16 @@
 def tableGridSearch(clf, all_columns=False, all_ranks=False, save=True):
+    """
+    Displays cross-validation results in a tabular format.
 
+    Parameters:
+    - clf: A trained classifier with cross-validation results.
+    - all_columns: If True, displays all columns in the table. Default is False.
+    - all_ranks: If True, includes all ranks in the table. Default is False.
+    - save: If True, saves the DataFrame to a CSV file. Default is True.
+
+    Returns:
+    None
+    """
     # Convert the cross validated results in a DataFrame ordered by `rank_test_score` and `mean_fit_time`.
     # As it is frequent to have more than one combination with the same max score,
     # the one with the least mean fit time SHALL appear first.
