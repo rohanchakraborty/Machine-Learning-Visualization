@@ -2,8 +2,9 @@ import pytest
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import GridSearchCV
-from my_cv_library.plotgridsearch import plotGridSearch
-from my_cv_library.tablegridsearch import tableGridSearch
+from cvplot.plotGridSearch import plotGridSearch
+from cvplot.tableGridSearch import tableGridSearch
+from sklearn.ensemble import RandomForestClassifier  # Add this import
 
 @pytest.fixture
 def iris_data():
@@ -28,7 +29,8 @@ def test_plotGridSearch(iris_data):
     grid_search.fit(X, y)
     # Call plotGridSearch and ensure it runs without errors
     plotGridSearch(grid_search)
-
+    assert True
+    
 def test_tableGridSearch(iris_data):
     X, y = iris_data
     # Define the parameter grid for RandomForestClassifier
