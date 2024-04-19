@@ -2,8 +2,8 @@ import pytest
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import GridSearchCV
-from cvplot.plotGridSearch import plotGridSearch
-from cvplot.tableGridSearch import tableGridSearch
+from plotGridSearch import plotGridSearch
+from tableGridSearch import tableGridSearch
 from sklearn.ensemble import RandomForestClassifier  # Add this import
 
 @pytest.fixture
