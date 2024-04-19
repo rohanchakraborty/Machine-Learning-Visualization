@@ -7,6 +7,6 @@ setup(
     install_requires=[
         'pandas',
         'plotly',
-        # Add any other dependencies here
+        
     ],
 )
